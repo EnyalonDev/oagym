@@ -1,0 +1,42 @@
+@import "tailwindcss" source(none);
+@source "../app";
+@source "../components";
+@source "../lib";
+@source "../constants";
+@source "../hooks";
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 210 20% 98%;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    touch-action: pan-y;
+  }
+
+  body {
+    background-color: #000000;
+    color: #E5E7EB;
+    /* iOS Safari: eliminar highlight gris/azul al tocar elementos */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Fix crítico iOS: botones y links responden inmediatamente sin delay de 300ms */
+  button,
+  a,
+  [role="button"] {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+  }
+
+  /* Prevenir zoom en doble-tap en inputs iOS */
+  input,
+  textarea,
+  select {
+    touch-action: manipulation;
+    font-size: 16px; /* Previene zoom automático en iOS */
+  }
+}
