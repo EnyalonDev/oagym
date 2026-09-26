@@ -75,6 +75,7 @@ export const INITIAL_PLANS: PlanData[] = [
     name: 'Plan Personalizado Premium',
     category: 'personalizado',
     price: 80,
+    pricePrefix: '+',
     formattedPrice: '+$80',
     duration: 'Todo incluido',
     description: 'Todo incluido: Ajuste a hábitos/deportes + Nutrición detallada + Entrenamiento especializado.',
