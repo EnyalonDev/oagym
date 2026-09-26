@@ -39,11 +39,10 @@ export function PlansSection({ plans, onOpenClientPortal }: PlansSectionProps) {
               <div
                 key={plan.id}
                 id={`plan-card-${plan.id}`}
-                className={`relative flex flex-col justify-between rounded-2xl border p-5 transition-all ${
-                  isFeatured
-                    ? 'border-blue-500 bg-gradient-to-b from-blue-950/30 via-zinc-900 to-black shadow-2xl shadow-blue-950/50 scale-[1.02] ring-1 ring-blue-500/50'
-                    : 'border-zinc-800 bg-zinc-900/60 hover:border-zinc-700'
-                }`}
+                className={`relative flex flex-col justify-between rounded-2xl border p-5 transition-all ${isFeatured
+                  ? 'border-blue-500 bg-gradient-to-b from-blue-950/30 via-zinc-900 to-black shadow-2xl shadow-blue-950/50 scale-[1.02] ring-1 ring-blue-500/50'
+                  : 'border-zinc-800 bg-zinc-900/60 hover:border-zinc-700'
+                  }`}
               >
                 {/* Popular / Recommended badge */}
                 {isFeatured && (
@@ -57,17 +56,16 @@ export function PlansSection({ plans, onOpenClientPortal }: PlansSectionProps) {
                   {/* Category icon & duration pill */}
                   <div className="mb-4 flex items-center justify-between gap-2">
                     <div
-                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border ${
-                        plan.category === 'inscripcion'
-                          ? 'bg-amber-600/20 text-amber-400 border-amber-500/40'
-                          : plan.category === 'personalizado'
+                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border ${plan.category === 'inscripcion'
+                        ? 'bg-amber-600/20 text-amber-400 border-amber-500/40'
+                        : plan.category === 'personalizado'
                           ? 'bg-blue-600/20 text-blue-400 border-blue-500/40'
                           : plan.category === 'nutricion'
-                          ? 'bg-emerald-600/20 text-emerald-400 border-emerald-500/40'
-                          : plan.category === 'entrenamiento'
-                          ? 'bg-orange-600/20 text-orange-400 border-orange-500/40'
-                          : 'bg-zinc-800 text-zinc-300 border-zinc-700'
-                      }`}
+                            ? 'bg-emerald-600/20 text-emerald-400 border-emerald-500/40'
+                            : plan.category === 'entrenamiento'
+                              ? 'bg-orange-600/20 text-orange-400 border-orange-500/40'
+                              : 'bg-zinc-800 text-zinc-300 border-zinc-700'
+                        }`}
                     >
                       {plan.category === 'inscripcion' ? (
                         <UserCheck className="h-5 w-5" />
@@ -101,8 +99,8 @@ export function PlansSection({ plans, onOpenClientPortal }: PlansSectionProps) {
                         {plan.duration === 'Pago único'
                           ? 'USD'
                           : plan.duration === 'Hereda mensualidad'
-                          ? 'USD / mes'
-                          : 'USD / mes'}
+                            ? 'USD / mes'
+                            : 'USD / mes'}
                       </span>
                     </div>
                   </div>
@@ -134,11 +132,10 @@ export function PlansSection({ plans, onOpenClientPortal }: PlansSectionProps) {
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-full flex items-center justify-center gap-1.5 rounded-xl py-2.5 text-xs font-bold transition-all shadow-md ${
-                      isFeatured
-                        ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-blue-900/40'
-                        : 'bg-zinc-800 hover:bg-zinc-700 text-zinc-100 border border-zinc-700/60'
-                    }`}
+                    className={`w-full flex items-center justify-center gap-1.5 rounded-xl py-2.5 text-xs font-bold transition-all shadow-md ${isFeatured
+                      ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-blue-900/40'
+                      : 'bg-zinc-800 hover:bg-zinc-700 text-zinc-100 border border-zinc-700/60'
+                      }`}
                   >
                     <span>Solicitar Plan</span>
                     <ArrowRight className="h-3.5 w-3.5" />

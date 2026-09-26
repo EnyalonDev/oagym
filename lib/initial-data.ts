@@ -77,11 +77,11 @@ export const INITIAL_PLANS: PlanData[] = [
     price: 80,
     pricePrefix: '+',
     formattedPrice: '+$80',
-    duration: 'Todo incluido',
+    duration: 'Hereda mensualidad',
     description: 'Todo incluido: Ajuste a hábitos/deportes + Nutrición detallada + Entrenamiento especializado.',
     recommended: true,
     features: [
-      'Todo incluido: Acceso total al gimnasio',
+      'Todo incluido: Acceso total al gimnasio TRTRTRTRT',
       'Ajuste a hábitos / deportes específicos',
       'Nutrición detallada y personalizada',
       'Entrenamiento especializado y guiado 1 a 1',
